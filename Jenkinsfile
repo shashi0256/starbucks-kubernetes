@@ -8,11 +8,7 @@ pipeline{
         SCANNER_HOME=tool 'sonar-scanner'
     }
     stages {
-        stage('clean workspace'){
-            steps{
-                cleanWs()
-            }
-        }
+        
         stage('Checkout from Git'){
             steps{
                 git branch: 'main', credentialsId: 'github-token', url: 'https://github.com/shashi0256/starbucks-kubernetes.git'
