@@ -49,7 +49,7 @@ pipeline{
                    withDockerRegistry(credentialsId: 'docker', toolName: 'docker'){   
                        sh "docker build -t starbucks ."
                        sh "docker tag starbucks starbucks:latest "
-                       #sh "docker push aseemakram19/starbucks:latest "
+                       
                     }
                 }
             }
